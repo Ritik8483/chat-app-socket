@@ -19,6 +19,7 @@ import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 // import { io } from "https://cdn.socket.io/4.7.2/socket.io.esm.min.js";
 import { io } from "socket.io-client";
 import ChatModal from "./ChatModal";
+import Chat from "./Chat";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -273,7 +274,8 @@ const Products = () => {
       )}
 
       {chatModal && (
-        <ChatModal chatModal={chatModal} onHide={() => setChatModal(false)} />
+        // <ChatModal chatModal={chatModal} onHide={() => setChatModal(false)} />
+        <Chat chatModal={chatModal} onHide={() => setChatModal(false)} />
       )}
     </>
   );
